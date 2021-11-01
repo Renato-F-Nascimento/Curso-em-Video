@@ -1,0 +1,125 @@
+W3C - World Wide Web Consortion
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>TITULO AQUI</title>
+
+<body>
+HTML Entities - &lt = < e &gt = >
+Emojipedia - U+1F604 = &#x1F604
+
+Imagens
+Unsplash / Pexels / Freepik / Rawpixel / Pixabay / Libreshot / Wikimedia commons
+
+JPG 30<x<50% compactação de um PNG
+
+<img src="foto.png" alt="Texto alternativo">
+
+Favicon
+IconArchive / favicon.cc / favicon.io
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<picture>
+	<source media ="(max-width: 1050px)" srcset="foto-m.png" type="image/png">
+	<img src.....>
+</picture>
+
+<strong> = Negrito
+<em> = Italico
+<mark> = marca texto
+<small> = diminuir letra
+<strike> = riscado
+<ins> = texto inserido
+<sub> e <sup> = subscrito e sobrescrito
+<code> = trechos de código
+<pre> = pre-formatado
+<q> = quotes = "citação"
+<blockquote> = citação longa / <blockquote cite="http://www....">
+<abbr tittle="Hyper Text Markup Language">HTML</abbr> = abreviações
+<bdo dir="rtl"> = Inverter texto
+<dl>
+	<dt>HTML</dt>
+	<dd>Linguagem de marcação utilizada para criar conteúdo</dd>
+</dl>
+<a href="http://... target="blank">Acesse o site</a> / rel="next" ou previous ou external e hreflang="en"
+<a href="arquivos/livro.pdf" download="nomedoarquivo.pdf" type="application/pdf">Clique para baixar</a> / Lista Media Types - iana.org
+
+<audio preload="metadata" controls autoplay loop>
+	<source src="media/audio.mp3" type="audio/mp3">
+	<source src="media/audio.ogg" type="audio/ogg">
+	<p>seu navegador não suporta<a href="media/audio.mp3" download="audio.mp3" type="audio/mp3"></a></p>
+</audio>
+<video width="600" poster="thumb.jpg" controls autoplay>
+	<source src="video.webm" type="video/webm">
+	<source src="video.mp4" type="video/mp4">	
+	<p>não carregou</p>
+</video>
+
+ADOBE COLOR
+COLORZILLA
+background-color: linear-gradient(90deg, yellow 40%, red 60%) / radial-gradient
+
+CSS Web Safe Font Combinations
+Fonts Ninja
+Google Fonts
+Font-style = italic
+font-variant = small-caps = deixa maiusculo mas tamanho menor
+font-weight = bold/bolder/100-900
+font-size/line-height = 1em
+font-family = Arial, Helvetica, sans-serif
+text-align: left/right/center/justify
+
+<h1 id=titulo-principal">TITULO AQUI</h1>
+<a href="http://..." class="importante">texto aqui</a>
+
+#titulo-principal{
+
+}
+.importante:hover{ / ::before / :visited / ::after
+
+BOX
+content - padding - border - outline - margin
+box-sizing: border-box = width e height pela borda
+border: -width style color / 10px solid red
+padding: cima-direita-baixo-esquerda / 10px 20px 30px 40px
+margin: auto = centralizar
+Block-level = nova linha e toda a largura = <div>, <aside>, <dl>, <h1>...
+inline-level = mesma linha e tamanho do conteudo = <a>, <abbr>, <img>
+Header
+Nav
+Main
+Section
+Article
+Aside
+Footer
+box-shadow: 3px 5px 4px black = sombra
+border-radius: 50%
+min-width: 400px
+max-width: 800px
+
+:root: {
+--cor0: #c5ebd6
+--cor1: 
+--fonte0:
+}
+color: var(--cor0)
+line-height: 1,2em
+text-shadow: 2px 2px 0px rgba h-offset / v-offset / blur / color
+
+
+
+
+
+
+
+
+
+
+
+
+
+

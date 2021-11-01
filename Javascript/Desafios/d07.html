@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ - US$</title>
+</head>
+<body>
+    <h1>Conversor R$ → US$</h1>
+    <button onclick="convert()">Converter</button>
+    <section id="msg">Clique no botão acima para converter</section>
+
+    <script>
+        let cot = Number(prompt('Antes de mais nada. Quanto está a cotação do dólar hoje?'))
+        function convert() {
+            let rs = Number(prompt('Quantos R$ você tem na carteira?'))
+            let dol = cot * rs
+            let msg = document.querySelector('#msg')
+            msg.innerHTML = `Com ${rs.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})} você pode comprar ${dol.toLocaleString('pt-BR', {style:'currency', currency:'USD'})} hoje.`
+        }
+
+    </script>
+</body>
+</html>

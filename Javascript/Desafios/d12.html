@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço</title>
+</head>
+<body>
+    <h1>Preço mudou</h1>
+    <button onclick="verificar()">Verificar</button>
+    <section id="msg">Clique no botão acima para analisar a mudança de preço</section>
+
+    <script>
+        function verificar() {
+            let pAnt = Number(prompt('Qual era o preço anterior do produto?'))
+            let pAtual = Number(prompt('Qual é o preço atual do produto?'))
+            let msg = document.querySelector('#msg')
+
+            if (pAnt > pAtual) {
+                let dif = pAnt - pAtual
+                let variacao = (dif / pAtual) * 100
+                msg.innerHTML = `<h2> Analisando os valores informados</h2>
+                                <p>O produto custava ${pAnt.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})} e agora custa ${pAtual.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}.</p>
+                                <p>Hoje o produto está mais barato.</p>
+                                <p>O preço diminuiu ${dif.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}.</p>
+                                Uma variação de ${variacao.toFixed(2).replace('.', ',')}% para baixo.`
+            } else {
+                let dif = pAtual - pAnt
+                let variacao = (dif / pAnt) * 100
+                msg.innerHTML = `<h2> Analisando os valores informados</h2>
+                                <p>O produto custava ${pAnt.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})} e agora custa ${pAtual.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}.</p>
+                                <p>Hoje o produto está mais caro.</p>
+                                <p>O preço aumentou ${dif.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}.</p>
+                                Uma variação de ${variacao.toFixed(2).replace('.', ',')}% para cima.`
+            }
+        }
+    </script>
+</body>
+</html>

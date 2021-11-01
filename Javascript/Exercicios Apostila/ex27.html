@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+        body {
+            font: 16px Arial;
+        }
+        h1, h2 {
+            font-family: 'Pacifico', cursive; font-weight: normal;
+        }
+        input[type=number] {
+            font-size: 16px;
+        }
+        input[type=submit] {
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Super Tabuada</h1>
+    <p>Escreva um número na caixa a seguir e te mostrarei a tabuada dele.</p>
+    <section>
+        <form action="#" method="GET">
+            <p><label for="num">Número:</label>
+            <input type="number" name="num" id="num" placeholder="Número">          
+            <input type="submit" value="Tabuada" formaction="javascript:tabuada()"> </p>           
+        </form>
+    </section>
+    <section id="msg">
+        <p>Preencha os dados acima e aperte o botão.</p>
+    </section>
+
+    <script>
+        function tabuada() {
+            let msg = document.querySelector("#msg")
+            let num = Number(document.querySelector("#num").value)
+            let mult = 1
+            msg.innerHTML = `<h2>Tabuada de ${num}</h2>`
+            while (mult <= 10) {
+                msg.innerHTML += `${num} x ${mult} = <strong>${num * mult}</strong><br>`
+                mult ++                
+            }
+        }
+    </script>
+
+</body>
+</html>

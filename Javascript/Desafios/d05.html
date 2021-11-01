@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Medidas</title>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="convert()">Converter</button>
+    <section id="msg">Clique no botão acima para iniciar...</section>
+
+    <script>
+        function convert() {
+            let m = Number(prompt('Digite uma distância em metros (m)'))
+            let km = (m / 1000) .toLocaleString('pt-BR')
+            let hm = (m / 100) .toLocaleString('pt-BR')
+            let dam = (m / 10) .toLocaleString('pt-BR')
+            let dm = (m * 10) .toLocaleString('pt-BR')
+            let cm = (m * 100) .toLocaleString('pt-BR')
+            let mm = (m * 1000) .toLocaleString('pt-BR')
+
+            let msg = document.querySelector('#msg')
+            msg.innerHTML = `<h2>A distância de ${m.toLocaleString('pt-BR')} metros, corresponde a...</h2>
+                            <p>${km} quilômetros (Km)</p>
+                            <p>${hm} hectômetros (Hm)</p>
+                            <p>${dam} decâmetros (Dam)</p>
+                            <p>${dm} decímetros (dm)</p>
+                            <p>${cm} centímetros (cm)</p>
+                            <p>${mm} milimetros (mm)</p>`
+        }
+    </script>
+</body>
+</html>

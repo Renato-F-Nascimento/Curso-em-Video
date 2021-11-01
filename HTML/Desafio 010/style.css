@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'iDroid';
+    src: url('/fontes/idroid.otf');
+}
+
+:root{
+    --cor0: #C5EBD6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2FA866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --fonte0: Arial, Helvetica, sans-serif;
+    --fonte1: 'Bebas Neue', cursive;
+    --fonte2: 'iDroid', cursive;
+}
+
+*{
+    line-height: 1.5em;
+    margin: 0px
+}
+
+img{
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+header{
+    background: linear-gradient( var(--cor2), 40%, var(--cor4));              
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    font-family: var(--fonte0);
+    color: rgb(238, 238, 238);
+    padding-top: 0px;
+}
+header>h1{
+    font-family: var(--fonte1);
+    font-weight: 200;
+    padding: 15px;
+}
+
+header>nav{
+    text-align: left;
+    }
+
+header>nav>a{
+    text-decoration: none;
+    color: rgb(238, 238, 238);
+    }
+
+nav{
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.466);
+    padding: 15px;
+}
+
+nav>a{
+    padding: 15px;
+    padding-bottom: 15px;
+}
+
+nav>a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5); 
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: none;   
+}
+
+body{
+    background-color: var(--cor0);
+    margin: 0%;
+    height: 100%;
+}
+
+main{
+    min-width: 400px;
+    max-width: 800px;
+    margin: auto;
+    text-align: justify;
+    background-color:rgb(255, 255, 255);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);    
+}
+
+main>article{
+    font-family: var(--fonte0);
+}    
+main>article>h1{
+    font-family: var(--fonte2);
+    color: var(--cor4);
+    font-size: 1.7em;
+}
+main>article>h2{
+    font-family: var(--fonte2);
+    color: var(--cor4);
+    background: linear-gradient(90deg, var(--cor1), white);
+}
+
+.link{
+    text-decoration: none;
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+.destaque{
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+div.video{
+    position: relative;
+    background-color: var(--cor4);
+    height: 0px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 15px;
+    padding-bottom: 59%;
+}
+
+div.video>iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor0);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#pergunta{
+    background-color: var(--cor3);
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+}
+
+ul{
+    list-style-type: '\2714\0020\0020';
+    columns: 2;
+    list-style-position: inside;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: var(--cor4);
+    font-family: var(--fonte0);
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+footer>p{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.destaque2{
+    font-weight: bold;
+}

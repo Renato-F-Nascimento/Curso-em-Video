@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Idade</title>
+</head>
+<body>
+    <h1>Calculando a Idade</h1>
+    <button onclick="calcular()">Iniciar</button>
+    <div id="msg">Aqui vai aparecer algo...</div>
+
+    <script>
+        function calcular() {
+            let nasc = Number(prompt("Em que ano você nasceu?"))
+            let data = new Date
+            let anoatual = data.getFullYear()
+            let msg = document.querySelector("#msg")
+            let idade = anoatual - nasc
+            msg.innerHTML = `<p>Quem nasceu em ${nasc} vai completar <strong>${idade}</strong> anos em ${anoatual}` 
+
+        }
+    </script>
+</body>
+</html>

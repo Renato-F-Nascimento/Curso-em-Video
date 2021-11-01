@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Valor</title>
+</head>
+<body>
+    <h1>Maior Valor</h1>
+    <button onclick="maior()">Clique aqui para começar</button>
+    <div class="msg">O resultado vai aparecer aqui...</div>
+    
+    <script>
+        function maior() {
+            let n1 = Number(prompt("Digite um número:"))
+            let n2 = Number(prompt("Digite outro número:"))
+            let nmaior = ""            
+            if (n1 > n2) {
+                nmaior = `o maior valor é <strong>${n1}</strong>`
+            } else if (n2 > n1) {
+                nmaior = `o maior valor é <strong>${n2}</strong>`
+            } else {
+                nmaior = `ambos são <strong>IGUAIS</strong>`
+            }
+            let msg = document.querySelector(".msg")
+            msg.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, ${nmaior}</p>`
+        }
+    </script>
+
+
+</body>
+</html>

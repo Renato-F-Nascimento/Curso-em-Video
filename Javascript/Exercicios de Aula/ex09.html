@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprodução em HTML</title>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+    Insira o país em que nasceu<input type="text" name="paístxt" id="paístxt">
+    <input type="button" value="Verificar" onclick="mostrar()">
+    <div id="nactxt">
+
+    </div>
+
+    <script>
+       
+        function mostrar(){
+        var pais = document.getElementById('paístxt')
+        var nac = document.querySelector('#nactxt')
+        var pais = String(pais.value)
+        nac.innerHTML = `Nascendo no país ${pais.charAt(0).toUpperCase() + pais.slice(1)},`
+        if (pais == 'Brasil'){
+            nac.innerHTML += `<p>Você é BR Huehuehue</p>`
+        }
+        else{
+            nac.innerHTML += `<p>Mus Forastero!</p>`
+        }
+    }
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analise de Data</title>
+</head>
+<body>
+    <h1>Analisando data e hora do sistema</h1>
+    <button onclick="analise()">Iniciar Análise</button>
+    <div id="msg">Aqui vai aparecer algo...</div>
+
+    <script>
+        function analise() {
+            let msg = document.querySelector("#msg")
+
+            let meses = new Array('Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez') 
+            let semana = new Array('Dom','Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab')
+
+            let data = new Date
+            let dia = data.getDate()
+            let mes = data.getMonth()
+            let ano = data.getFullYear()
+            let dsem = data.getDay()
+            let hora = data.getHours()
+            let min = data.getMinutes()
+            let seg = data.getSeconds()
+            
+            msg.innerHTML = `<p>Dia: <mark>${dia}</mark></p>`
+            msg.innerHTML += `<p>Mês: <mark>${meses[mes]}</mark></p>`
+            msg.innerHTML += `<p>Ano: <mark>${ano}</mark></p>`
+            msg.innerHTML += `<p>Dia da semana: <mark>${semana[dsem]}</mark></p>`
+            msg.innerHTML += `<p>Hora: <mark>${hora}</mark></p>`
+            msg.innerHTML += `<p>Minutos: <mark>${min}</mark></p>`
+            msg.innerHTML += `<p>Segundos: <mark>${seg}</mark></p>`
+
+        }
+    </script>
+
+</body>
+</html>
